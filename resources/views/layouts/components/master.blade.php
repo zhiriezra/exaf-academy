@@ -50,8 +50,6 @@
 
         @yield('content')
 
-
-
     </main>
 
     <footer class="bg-ezra-green-dark text-white py-4">
