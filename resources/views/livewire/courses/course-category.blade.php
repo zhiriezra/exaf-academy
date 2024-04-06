@@ -1,5 +1,5 @@
 <div class="mx-8">
-    <h4 class="text-2xl md:text-3xl font-bold text-ezra-green">Available Self-study Courses</h4>
+    <h4 class="text-2xl md:text-3xl font-semibold text-ezra-green">Available Self-study Courses</h4>
     <p class="mt-3 text-base">Through a series of short, interactive and engaging courses, build valuable skills, earn career credentials, and make impactful progress as an extensionist.</p>
 
     <div class="grid md:grid-cols-4 mt-12 gap-8 pb-2">

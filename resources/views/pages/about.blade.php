@@ -5,16 +5,14 @@
 <div class="">
 
     <div class="mt-8 md:mt-0 grid md:grid-cols-2 items-center min-h-svh">
-        <div class="px-6 space-y-8">
+        <div class="px-6 space-y-6">
             <h2 class="font-bold text-4xl text-ezra-green">Our Purpose</h2>
             <p class="text-justify leading-relaxed md:text-2xl">
                 The agricultural landscape is evolving rapidly, demanding skilled professionals equipped to navigate its challenges and opportunities. Recognizing this need, birthed the African Agribusiness Extension Academy. This dynamic initiative bridges the gap between academic knowledge and practical experience, empowering young minds to become the next generation of agribusiness leaders.
             </p>
         </div>
 
-        <div class="md:h-full w-full mt-8 md:mt-0">
-            <img src="{{ asset('images/medium-shot-man-paying-product.jpg') }}" class="h-full object-cover object-center" alt="">
-        </div>
+        <img src="{{ asset('images/medium-shot-man-paying-product.jpg') }}" class="h-full object-cover object-center" alt="">
     </div>
 
     <div class="bg-gray-200 py-14">

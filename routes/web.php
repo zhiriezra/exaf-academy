@@ -28,4 +28,6 @@ Route::get('course-list', [FrontController::class, 'getCoursesByField'])->name('
 Route::get('course/{course}',[FrontController::class, 'getSingleCourse'])->name('course.detail');
 Route::get('course-catalogue', [FrontController::class, 'courseCatalogue'])->name('course.catalogue');
 
+Route::get('pathway/{slug}', [FrontController::class, 'pathway'])->name('pathway.detail');
+
 Route::get('about-academy', [FrontController::class, 'about'])->name('about');

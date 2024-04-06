@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pathway;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -67,6 +68,11 @@ class FrontController extends Controller
         } else {
 
             $createdUser = $response[0]['username'];
+
+            // Make this a queue for performance
+            $this->add_new_user_to_cohort($request->program, $request->username);
+
+
             $loginAttempt = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
                 'wstoken' => '6dce0796e2e69e00d438f1cf85d016a6',
                 'wsfunction' => 'auth_userkey_request_login_url',
@@ -85,6 +91,36 @@ class FrontController extends Controller
             }
 
         }
+
+    }
+
+    public function add_new_user_to_cohort($cohort, $username){
+
+
+        $members = [
+            [
+                'cohorttype' => [
+                    'type' => 'idnumber',
+                    'value' => $cohort
+                ],
+
+                'usertype' => [
+                    'type' => 'username',
+                    'value' => $username
+                ]
+            ]
+
+        ];
+
+        $response = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
+
+            'wstoken' => 'bbbd2c1bc2ef4d0b214c1e5479a73be3',
+            'wsfunction' => 'core_cohort_add_cohort_members',
+            'moodlewsrestformat' => 'json',
+            'members' =>    $members
+
+        ]);
+
     }
 
     public function loginNewUSer($username){
@@ -170,6 +206,12 @@ class FrontController extends Controller
         $response = $request->json();
         return redirect($response['loginurl']);
 
+    }
+
+    public function pathway($slug){
+        $pathway = Pathway::where('slug', $slug)->first();
+
+        return view('pages.pathway',compact('pathway'));
     }
 }
 

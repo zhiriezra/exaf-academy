@@ -43,18 +43,19 @@
     </section>
 
     <section aria-label="our courses" class="bg-gray-50 p-8">
-        <div class="mx-8">
-            <h4 class="text-2xl md:text-3xl font-bold text-ezra-green">Afrexa Learning Pathways</h4>
+        <div class="mx-3">
+            <h4 class="text-2xl md:text-3xl font-semibold text-ezra-green">Afrexa Learning Pathways</h4>
             <p class="mt-3 text-base md:text-base">Develop your career with our expertly crafted programs for all stakeholders across the Agro-allied value chain. You can build valuable skills, earn career credentials, and make impactful progress as an extensionist.</p>
 
-            <div class="grid md:grid-cols-3 container mx-auto mt-12 gap-8">
+            <div class="grid md:grid-cols-3 mt-12 gap-8">
                 <div class="shadow-lg rounded-lg hover:bg-ezra-green-light hover:text-white">
                     <div>
                         <img src="{{ asset('images/fba.webp') }}" class="rounded-t-lg h-42 md:h-44 lg:h-52 w-full object-cover object-center" alt="">
                     </div>
                     <div class="p-4 py-6 space-y-4">
-                        <h4 class="font-semibold text-lg md:text-lg">Farmer Business Associate</h4>
-                        <p class="text-sm text-pretty line-clamp-6">The average ratio of extension agents to farmers 1:10,000 (i.e, 1 Extension Agent for every 10,000 farmers) is inadequate, leading to low productivity and financial issues. To address this, we have Farmer Business Associates (FBAs) who are trained, tech-driven, and selected from farming communities. By transforming FBAs into micro-SMEs, they earn more as they serve more farmers, promoting sustainable and inclusive extension services.</p>
+                        <h4 class="font-semibold text-md md:text-md">Student Agribusiness Extension Program (SAEP)</h4>
+                        <p class="text-sm text-pretty">The Student Agribusiness Extension Program (SAEP) equips students with the knowledge and skills necessary to pursue careers in agribusiness. The program offers a comprehensive learning experience that combines classroom instruction, practical application through internships, and online learning opportunities.
+                        </p>
                         <div class="pt-6">
                             <a href="#" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
                         </div>
@@ -66,8 +67,23 @@
                         <img src="{{ asset('images/farmer-graduate.jpg') }}" class="rounded-t-lg h-42 md:h-44 lg:h-52 w-full object-cover object-center" alt="">
                     </div>
                     <div class="p-4 py-6 space-y-4">
-                        <h4 class="font-semibold text-lg md:text-lg">Graduate Extension Program</h4>
-                        <p class="text-sm text-pretty line-clamp-6">This programme is for Graduates who are interested in becoming Certified Agro Extensionists . A graduate extensionist certificate is given to an individual who has taken all the required Modules and Learning Methodology on the Afrexa platform, obtained a mark of 60% and undergone an assessment session (physical/virtual) to demonstrate that he or she can teach and transfer the knowledge to others.</p>
+                        <h4 class="font-semibold text-md md:text-md">Graduate Agribusiness Extension Program (GAEP)</h4>
+                        <p class="text-sm text-pretty">The Graduate Agribusiness Extension Program (GAEP) is designed to empower individuals at various stages of their agribusiness careers. The program equips recent graduates with the knowledge and skills needed to excel in the field, while also addressing the needs of existing Extension Agents and retirees seeking to bridge knowledge gaps and enhance their expertise.
+                        </p>
+                        <div class="pt-6">
+                            <a href="#" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow-lg rounded-lg hover:bg-ezra-green-light hover:text-white">
+                    <div>
+                        <img src="{{ asset('images/aepp-resized.png') }}" class="rounded-t-lg h-42 md:h-44 lg:h-52 w-full object-cover object-top" alt="">
+                    </div>
+                    <div class="p-4 py-6 space-y-4">
+                        <h4 class="font-semibold text-md md:text-md">Agribusiness Extension Program for Professionals</h4>
+                        <p class="text-sm text-pretty">The Agribusiness Extension Program for Professionals (AEPP) is designed to empower stakeholders in the agribusiness sector to effectively reach and support last-mile farmers. The program equips agents working for these stakeholders with the knowledge and skills necessary to improve business delivery and service provision, ultimately leading to solutions that address the specific needs of these farmers.
+                        </p>
                         <div class="pt-6">
                             <a href="#" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
                         </div>
@@ -79,7 +95,7 @@
                         <img src="{{ asset('images/finlitjpg.jpg') }}" class="rounded-t-lg h-42 md:h-44 lg:h-52 w-full object-cover object-center" alt="">
                     </div>
                     <div class="p-4 py-6 space-y-4">
-                        <h4 class="font-semibold text-lg md:text-lg">Financial Literacy Programme</h4>
+                        <h4 class="font-semibold text-md md:text-md">Financial Literacy Programme</h4>
                         {{-- <p class="text-sm text-pretty line-clamp-6">This programme is for individuals who are interested in becoming Certified Financial Literacy Trainers. A trainer certificate is given to an individual who has taken all the Financial Literacy Modules and Learning Methodology on the SabiMONI platform, obtained a mark of 60% and undergone an assessment session (physical/virtual) to demonstrate that he or she can teach and transfer the knowledge to others.</p>
                         <div class="pt-6">
                             <a href="#" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
@@ -92,13 +108,13 @@
 
     </section>
 
-    <section class="px-8">
+    <section class="px-3">
         @livewire('courses.course-category')
     </section>
 
     <section class="px-8 py-8 bg-gray-50">
-        <div class="mx-8">
-            <h4 class="text-2xl md:text-3xl font-bold text-ezra-green">Other Resources</h4>
+        <div class="mx-3">
+            <h4 class="text-2xl md:text-3xl font-semibold text-ezra-green">Other Resources</h4>
 
             <div class="pt-6 container mx-auto flex flex-wrap max-w-5xl items-start justify-center md:justify-between gap-8">
 
@@ -130,8 +146,8 @@
     </section>
 
     <section class="px-8 pb-12" class="partners">
-        <div class="mx-8">
-            <h4 class="text-2xl md:text-3xl font-bold text-ezra-green">Partners</h4>
+        <div class="mx-3">
+            <h4 class="text-2xl md:text-3xl font-semibold text-ezra-green">Partners</h4>
 
             <div class="items-center pt-6">
                 <div class="container mx-auto">

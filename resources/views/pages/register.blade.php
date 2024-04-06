@@ -53,6 +53,19 @@
                     @endif
                 </div>
 
+                <div class="col-span-2">
+                    <select name="program" id="" class="w-full p-2 rounded-xl border mt-2">
+                        <option value="">Select Program</option>
+                        <option value="saep">Student Agribusiness Extension Program (SAEP)</option>
+                        <option value="gaep">Graduate Agribusiness Extension Program (GAEP)</option>
+                        <option value="aepp">Agribusiness Extension Program for Professionals</option>
+                        <option value="general">Self-study courses</option>
+                    </select>
+                    @if ($errors->has('phone'))
+                        <span class="text-sm text-red-400">{{ $errors->first('phone') }}</span>
+                    @endif
+                </div>
+
                 <div>
                     <input value="{{ old('password') }}" name="password" class="w-full p-2 rounded-xl border mt-2" type="password" placeholder="password">
                     @if ($errors->has('password'))

@@ -46,7 +46,7 @@
         </header>
     @endif
 
-    <main class="grid gap-12 sm:gap-16 md:gap-18 lg:gap-20 overflow-hidden">
+    <main class="grid gap-12 sm:gap-y-16 md:gap-y-18 lg:gap-y-20 overflow-hidden">
 
         @yield('content')
 
