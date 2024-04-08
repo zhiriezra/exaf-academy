@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
 Route::get('/login', [FrontController::class, 'login'])->name('login');
 Route::get('/loginTest', [FrontController::class, 'loginTest'])->name('login.test');
@@ -28,6 +26,9 @@ Route::get('course-list', [FrontController::class, 'getCoursesByField'])->name('
 Route::get('course/{course}',[FrontController::class, 'getSingleCourse'])->name('course.detail');
 Route::get('course-catalogue', [FrontController::class, 'courseCatalogue'])->name('course.catalogue');
 
-Route::get('pathway/{slug}', [FrontController::class, 'pathway'])->name('pathway.detail');
+Route::get('pathway/saep', [FrontController::class, 'saep'])->name('pathway.saep');
+Route::get('pathway/gaep', [FrontController::class, 'gaep'])->name('pathway.gaep');
+Route::get('pathway/aepp', [FrontController::class, 'aepp'])->name('pathway.aepp');
+
 
 Route::get('about-academy', [FrontController::class, 'about'])->name('about');

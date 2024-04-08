@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class CourseCategory extends Component
 {
-    public $BASE_URL = 'http://localhost/exaf-academy';
+    public $BASE_URL = 'https://backup.extensionafrica.com/lms';
 
     public $courses;
 
@@ -20,14 +20,15 @@ class CourseCategory extends Component
 
         $response = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
 
-            'wstoken' => 'bbbd2c1bc2ef4d0b214c1e5479a73be3',
+            'wstoken' => 'f1dad363aee866aaf29ed993282f6235',
             'wsfunction' => 'core_course_get_courses_by_field',
             'moodlewsrestformat' => 'json',
             'field' => 'ids',
-            'value' => '2,6,7,8'
+            'value' => '4,5'
 
         ]);
         $response = $response->json();
+
 
         $this->courses = $response['courses'];
     }

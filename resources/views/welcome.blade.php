@@ -1,7 +1,6 @@
 @extends('layouts.components.master')
 
 @section('content')
-
     <section aria-label="qualities" class="mt-8 px-8 relative">
 
         <img src="{{ asset('images/dots.svg') }}" class="hidden md:block absolute top-1/2 -translate-y-1/2 -left-14 xl:-left-7" alt="dots" aria-hidden="true">
@@ -57,7 +56,7 @@
                         <p class="text-sm text-pretty">The Student Agribusiness Extension Program (SAEP) equips students with the knowledge and skills necessary to pursue careers in agribusiness. The program offers a comprehensive learning experience that combines classroom instruction, practical application through internships, and online learning opportunities.
                         </p>
                         <div class="pt-6">
-                            <a href="#" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
+                            <a href="{{ route('pathway.saep') }}" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +70,7 @@
                         <p class="text-sm text-pretty">The Graduate Agribusiness Extension Program (GAEP) is designed to empower individuals at various stages of their agribusiness careers. The program equips recent graduates with the knowledge and skills needed to excel in the field, while also addressing the needs of existing Extension Agents and retirees seeking to bridge knowledge gaps and enhance their expertise.
                         </p>
                         <div class="pt-6">
-                            <a href="#" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
+                            <a href="{{ route('pathway.gaep') }}" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +84,7 @@
                         <p class="text-sm text-pretty">The Agribusiness Extension Program for Professionals (AEPP) is designed to empower stakeholders in the agribusiness sector to effectively reach and support last-mile farmers. The program equips agents working for these stakeholders with the knowledge and skills necessary to improve business delivery and service provision, ultimately leading to solutions that address the specific needs of these farmers.
                         </p>
                         <div class="pt-6">
-                            <a href="#" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
+                            <a href="{{ route('pathway.aepp') }}" class="bg-ezra-green p-2 text-white rounded-md">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +124,7 @@
                         </svg>
 
                     </div>
-                    <a href="http://localhost/exaf-academy/course/view.php?id=5" target="_blank" class="text-white hover:text-ezra-green-dark">
+                    <a href="https://backup.extensionafrica.com/public/lms/course/view.php?id=9" target="_blank" class="text-white hover:text-ezra-green-dark">
                         <h4 class="text-xl font-bold">Afrexa Forums</h4>
                     </a>
                 </div>

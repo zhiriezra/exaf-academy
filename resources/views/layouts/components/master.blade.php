@@ -23,8 +23,9 @@
             <div role="menubar" class="hidden flex-col items-center gap-8 absolute right-0 left-0 top-[3.8rem] bg-neutral-50 shadow-xl text-center p-6 text-lg md:flex md:flex-row md:static md:shadow-none md:justify-end md:w-full md:bg-white">
                 <a href="/" role="menuitem" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-white hover:opacity-75 transition-opacity {{ request()->routeIs('welcome') ? 'border-b-2 border-yellow-400' : ''}}">Home</a>
                 <a href="{{ route('about') }}" role="menuitem" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-white hover:opacity-75 transition-opacity {{ request()->routeIs('about') ? 'border-b-2 border-yellow-400' : ''}}">About Afrexa</a>
+                <a href="#" role="menuitem" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-white hover:opacity-75 transition-opacity">Testimonials</a>
                 <a href="{{ route('login') }}" role="menuitem" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-white hover:opacity-75 transition-opacity {{ request()->routeIs('login') ? 'border-b-2 border-yellow-400' : ''}}">Login</a>
-                <a href="{{ route('register') }}" role="menuitem" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-md ring-offset-4 ring-offset-white bg-yellow-500 text-white px-6 py-1 shadow-xl hover:shadow-none transition-shadow">Join for Free</a>
+                <a href="{{ route('register') }}" role="menuitem" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-md ring-offset-4 ring-offset-white bg-yellow-500 text-white px-6 py-1 shadow-xl hover:shadow-none transition-shadow">Create An Account</a>
             </div>
 
         </div>
@@ -65,7 +66,7 @@
                     <p>(+234) 907 666 065</p>
                     <p>info@extensionafrica.com</p>
                     <p class="text-sm text-yellow-300">G24, Abdullahi Bayero Road, Railway Quarters, Kano - Nigeria.</p>
-                    <p class="text-sm text-yellow-300">G24, 4th Avenue Gwarinpa, Abuja - Nigeria.</p>
+                    <p class="text-sm text-yellow-300">Extension Africa, 4th Avenue Gwarinpa, Abuja - Nigeria.</p>
                 </div>
 
                 <div class="flex justify-center md:justify-start items-center">

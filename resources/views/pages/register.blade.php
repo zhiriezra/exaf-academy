@@ -61,8 +61,8 @@
                         <option value="aepp">Agribusiness Extension Program for Professionals</option>
                         <option value="general">Self-study courses</option>
                     </select>
-                    @if ($errors->has('phone'))
-                        <span class="text-sm text-red-400">{{ $errors->first('phone') }}</span>
+                    @if ($errors->has('program'))
+                        <span class="text-sm text-red-400">{{ $errors->first('program') }}</span>
                     @endif
                 </div>
 

@@ -12,7 +12,7 @@
             </p>
         </div>
 
-        <img src="{{ asset('images/medium-shot-man-paying-product.jpg') }}" class="h-full object-cover object-center" alt="">
+        <img src="{{ asset('images/medium-shot-man-paying-product.jpg') }}" class="w-full md:h-full md:object-cover md:object-center" alt="">
     </div>
 
     <div class="bg-gray-200 py-14">
@@ -27,7 +27,7 @@
                     <h4 class="text-lg font-semibold">Office Addresses: </h4>
                     <ul>
                         <li>G24, Abdullahi Bayero Road, Railway Quarters, Kano - Nigeria.</li>
-                        <li>G24, 4th Avenue Gwarinpa, Abuja - Nigeria.</li>
+                        <li>Extension Africa, 4th Avenue Gwarinpa, Abuja - Nigeria.</li>
                     </ul>
                 </div>
 

@@ -8,7 +8,11 @@ use Illuminate\Support\Facades\Http;
 
 class FrontController extends Controller
 {
-    public $BASE_URL = 'http://localhost/exaf-academy';
+    public $BASE_URL = 'https://backup.extensionafrica.com/lms';
+
+    function welcome(){
+        return view('welcome');
+    }
 
     function login(){
         return view('pages.login');
@@ -27,12 +31,13 @@ class FrontController extends Controller
             'firstname' => 'required',
             'lastname' => 'required',
             'phone' => 'required|numeric|unique:mdl_user,phone1,except,id',
-            'password' => 'required|min:6|confirmed'
+            'password' => 'required|min:6|confirmed',
+            'program' => 'required'
         ]);
 
         $response = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
 
-            'wstoken' => 'bbbd2c1bc2ef4d0b214c1e5479a73be3',
+            'wstoken' => 'f1dad363aee866aaf29ed993282f6235',
             'wsfunction' => 'core_user_create_users',
             'moodlewsrestformat' => 'json',
             'users' => [
@@ -43,7 +48,7 @@ class FrontController extends Controller
                     'lastname' => $request->lastname,
                     'email' => $request->email,
                     'auth' => 'manual',
-                    'phone1' => $request->phone
+                    'phone1' => $request->phone,
                 ]
             ]
 
@@ -114,7 +119,7 @@ class FrontController extends Controller
 
         $response = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
 
-            'wstoken' => 'bbbd2c1bc2ef4d0b214c1e5479a73be3',
+            'wstoken' => 'f1dad363aee866aaf29ed993282f6235',
             'wsfunction' => 'core_cohort_add_cohort_members',
             'moodlewsrestformat' => 'json',
             'members' =>    $members
@@ -152,7 +157,7 @@ class FrontController extends Controller
 
         $response = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
 
-            'wstoken' => 'bbbd2c1bc2ef4d0b214c1e5479a73be3',
+            'wstoken' => 'f1dad363aee866aaf29ed993282f6235',
             'wsfunction' => 'core_course_get_courses_by_field',
             'moodlewsrestformat' => 'json',
             'field' => 'shortname',
@@ -178,11 +183,11 @@ class FrontController extends Controller
 
         $response = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
 
-            'wstoken' => 'bbbd2c1bc2ef4d0b214c1e5479a73be3',
+            'wstoken' => 'f1dad363aee866aaf29ed993282f6235',
             'wsfunction' => 'core_course_get_courses_by_field',
             'moodlewsrestformat' => 'json',
             'field' => 'ids',
-            'value' => '2,6,7,8'
+            'value' => '4,5'
         ]);
         $courses = $response->json();
 
@@ -208,10 +213,16 @@ class FrontController extends Controller
 
     }
 
-    public function pathway($slug){
-        $pathway = Pathway::where('slug', $slug)->first();
+    public function saep(){
+        return view('pages.saep');
+    }
 
-        return view('pages.pathway',compact('pathway'));
+    public function gaep(){
+        return view('pages.gaep');
+    }
+
+    public function aepp(){
+        return view('pages.aepp');
     }
 }
 
