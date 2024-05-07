@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Http;
 
 class FrontController extends Controller
 {
-    public $BASE_URL = 'https://backup.extensionafrica.com/lms';
+    public $BASE_URL = 'https://academy.extensionafrica.com/lms';
 
     function welcome(){
         return view('welcome');

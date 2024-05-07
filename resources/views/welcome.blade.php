@@ -41,7 +41,21 @@
         </div>
     </section>
 
-    <section aria-label="our courses" class="bg-gray-50 p-8">
+    <section class="mt-4 px-8 gap-6">
+        <div class="flex justify-center">
+            <div>
+                <h4 class="text-2xl md:text-3xl font-semibold text-ezra-green">What we do</h4>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptas eos quod suscipit illum velit sit provident commodi aspernatur voluptatem impedit officiis nobis distinctio tempora, similique, sed ullam facilis dignissimos.
+            </div>
+
+            <video  controls autoplay muted class="rounded-lg">
+                <source src="{{ asset('videos/afrexa-graduands.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section aria-label="our courses" class="bg-gray-50 p-8" id="testimonial">
         <div class="mx-3">
             <h4 class="text-2xl md:text-3xl font-semibold text-ezra-green">Afrexa Learning Pathways</h4>
             <p class="mt-3 text-base md:text-base">Develop your career with our expertly crafted programs for all stakeholders across the Agro-allied value chain. You can build valuable skills, earn career credentials, and make impactful progress as an extensionist.</p>
@@ -124,7 +138,7 @@
                         </svg>
 
                     </div>
-                    <a href="https://backup.extensionafrica.com/public/lms/course/view.php?id=9" target="_blank" class="text-white hover:text-ezra-green-dark">
+                    <a href="https://academy.extensionafrica.com/public/lms/course/view.php?id=9" target="_blank" class="text-white hover:text-ezra-green-dark">
                         <h4 class="text-xl font-bold">Afrexa Forums</h4>
                     </a>
                 </div>

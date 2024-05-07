@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class CourseCategory extends Component
 {
-    public $BASE_URL = 'https://backup.extensionafrica.com/lms';
+    public $BASE_URL = 'https://academy.extensionafrica.com/lms';
 
     public $courses;
 

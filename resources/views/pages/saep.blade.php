@@ -9,7 +9,7 @@
         <div class="md:mt-8 p-6 space-y-6">
             <h2 class="text-2xl md:text-3xl font-semibold text-ezra-green">About this Program</h2>
 
-            <p class="">The Agribusiness Extension Program for Professionals (AEPP) is designed to empower stakeholders in the agribusiness sector to effectively reach and support last-mile farmers. The program equips agents working for these stakeholders with the knowledge and skills necessary to improve business delivery and service provision, ultimately leading to solutions that address the specific needs of these farmers.</p>
+            <p class="">The Student Agribusiness Extension Program (SAEP) equips students with the knowledge and skills necessary to pursue careers in agribusiness. The program offers a comprehensive learning experience that combines classroom instruction, practical application through internships, and online learning opportunities.</p>
 
             <div class="flex flex-wrap md:flex-nowrap justify-around gap-4">
                 <img src="{{ asset('images/fba.webp') }}" alt="" class="w-full md:w-1/2 md:h-72 object-cover object-center">
