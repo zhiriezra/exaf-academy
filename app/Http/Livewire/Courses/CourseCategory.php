@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class CourseCategory extends Component
 {
-    public $BASE_URL = 'https://backup.extensionafrica.com/lms';
+    public $BASE_URL = 'https://academy.extensionafrica.com/lms';
 
     public $courses;
 
@@ -24,7 +24,7 @@ class CourseCategory extends Component
             'wsfunction' => 'core_course_get_courses_by_field',
             'moodlewsrestformat' => 'json',
             'field' => 'ids',
-            'value' => '4,5'
+            'value' => '4,5,10'
 
         ]);
         $response = $response->json();

@@ -1,12 +1,12 @@
 @extends('layouts.components.auth.master')
 
 @section('content')
-    <section class="h-screen flex flex-col items-center justify-center">
-        {{-- <div class="">
-            <img class="rounded-2xl w-64 h-64 object-cover object-center" src="{{ asset('images/Collaboration-amico.png') }}" alt="">
-        </div> --}}
+    <section class="h-screen grid grid-cols-2 items-center justify-center gap-6">
+        <div class="bg-[url('/public/images/introduction-to-agribusiness-extensionist-featured-image.webp')] bg-cover bg-center bg-no-repeat h-full w-full">
+            {{-- <img class="rounded-2xl w-64 h-64 object-cover object-center" src="{{ asset('images/Collaboration-amico.png') }}" alt=""> --}}
+        </div>
 
-        <div class="p-6 bg-gray-100 shadow-lg max-w-sm md:max-w-full rounded-lg">
+        <div class="mx-6 p-6 bg-gray-100 shadow-lg max-w-sm md:max-w-full rounded-lg">
             <h2 class="font-bold text-2xl text-ezra-green">Login</h2>
             <p class="text-sm mt-4 text-yellow-500">If you already don't have an account, <a href="{{ route('register')}}" class="underline font-semibold">please create an account</a>.</p>
 

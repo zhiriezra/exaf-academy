@@ -1,6 +1,6 @@
 <div class="hover:cursor-pointer w-full border-b border-white">
 
-    <div class="bg-yellow-400 hover:bg-yellow-300 text-white rounded-lg p-2 flex justify-between items-center peer" wire:click="toggle()">
+    <div class="bg-ezra-green-light hover:bg-ezra-green text-white rounded-lg p-2 flex justify-between items-center peer" wire:click="toggle()">
         <h4 class="font-semibold">{{ $title }}</h4>
 
 
