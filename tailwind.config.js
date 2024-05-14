@@ -12,6 +12,9 @@ module.exports = {
             'ezra-green-light': '#66966e',
             'ezra-green': '#287e36',
         },
+        backgroundImage: {
+            'hero-background': "url('public/images/couch.png')",
+          }
     },
   },
   plugins: [],

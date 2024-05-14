@@ -24,7 +24,7 @@ class CourseCategory extends Component
             'wsfunction' => 'core_course_get_courses_by_field',
             'moodlewsrestformat' => 'json',
             'field' => 'ids',
-            'value' => '4,5'
+            'value' => '4,5,10'
 
         ]);
         $response = $response->json();

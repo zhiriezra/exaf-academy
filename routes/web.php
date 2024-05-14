@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Livewire\Components\Success;
+use App\Http\Livewire\RegistrationGaep;
+use App\Http\Livewire\RegistrationSaep;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,13 +25,18 @@ Route::get('/loginTest', [FrontController::class, 'loginTest'])->name('login.tes
 Route::get('/register', [FrontController::class, 'register'])->name('register');
 Route::post('/register', [FrontController::class, 'createAccount'])->name('register');
 
+Route::get('/register-saep', RegistrationSaep::class)->name('register.saep');
+Route::get('/register-gaep', RegistrationGaep::class)->name('register.gaep');
+Route::get('/register-aepp', [FrontController::class, 'registerAepp'])->name('register.aepp');
+
 Route::get('course-list', [FrontController::class, 'getCoursesByField'])->name('course-list');
 Route::get('course/{course}',[FrontController::class, 'getSingleCourse'])->name('course.detail');
 Route::get('course-catalogue', [FrontController::class, 'courseCatalogue'])->name('course.catalogue');
 
-Route::get('pathway/saep', [FrontController::class, 'saep'])->name('pathway.saep');
-Route::get('pathway/gaep', [FrontController::class, 'gaep'])->name('pathway.gaep');
-Route::get('pathway/aepp', [FrontController::class, 'aepp'])->name('pathway.aepp');
+Route::get('program/saep', [FrontController::class, 'saep'])->name('pathway.saep');
+Route::get('program/gaep', [FrontController::class, 'gaep'])->name('pathway.gaep');
+Route::get('program/aepp', [FrontController::class, 'aepp'])->name('pathway.aepp');
 
+Route::get('success', Success::class)->name('success');
 
 Route::get('about-academy', [FrontController::class, 'about'])->name('about');

@@ -27,7 +27,7 @@ class FrontController extends Controller
 
         $this->validate($request, [
             'username' => 'required|unique:mdl_user,username,except,id',
-            'email' => 'required|unique:mdl_user,email,except,id',
+            'email' => 'required|unique:mdl_user,email,except,id|email',
             'firstname' => 'required',
             'lastname' => 'required',
             'phone' => 'required|numeric|unique:mdl_user,phone1,except,id',
@@ -187,7 +187,7 @@ class FrontController extends Controller
             'wsfunction' => 'core_course_get_courses_by_field',
             'moodlewsrestformat' => 'json',
             'field' => 'ids',
-            'value' => '4,5'
+            'value' => '4,5,10'
         ]);
         $courses = $response->json();
 
