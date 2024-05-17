@@ -11,7 +11,7 @@
 
             <p class="">The Graduate Agribusiness Extension Program (GAEP) is designed to empower individuals at various stages of their agribusiness careers. The program equips recent graduates with the knowledge and skills needed to excel in the field, while also addressing the needs of existing Extension Agents and retirees seeking to bridge knowledge gaps and enhance their expertise.</p>
 
-            <img src="{{ asset('images/farmer-graduate.jpg') }}" alt="" class="md:hidden w-full object-cover object-top">
+            <img src="{{ asset('images/farmer-graduate.jpg') }}" alt="" class="md:hidden w-full h-52 object-cover object-top">
 
             <div class="flex flex-wrap md:flex-nowrap justify-around gap-4">
 
@@ -84,7 +84,7 @@
 
                 </div>
 
-                <img src="{{ asset('images/farmer-graduate.jpg') }}" alt="" class="hidden md:block w-full md:w-1/2 md:h-72 object-cover object-center">
+                <img src="{{ asset('images/farmer-graduate.jpg') }}" alt="" class="hidden md:block w-full md:w-1/2 md:h-full object-cover object-center">
 
             </div>
 

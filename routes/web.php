@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontController;
 use App\Http\Livewire\Components\Success;
+use App\Http\Livewire\RegistrationAepp;
 use App\Http\Livewire\RegistrationGaep;
 use App\Http\Livewire\RegistrationSaep;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,7 @@ Route::post('/register', [FrontController::class, 'createAccount'])->name('regis
 
 Route::get('/register-saep', RegistrationSaep::class)->name('register.saep');
 Route::get('/register-gaep', RegistrationGaep::class)->name('register.gaep');
-Route::get('/register-aepp', [FrontController::class, 'registerAepp'])->name('register.aepp');
+Route::get('/register-aepp', RegistrationAepp::class)->name('register.aepp');
 
 Route::get('course-list', [FrontController::class, 'getCoursesByField'])->name('course-list');
 Route::get('course/{course}',[FrontController::class, 'getSingleCourse'])->name('course.detail');

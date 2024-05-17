@@ -27,6 +27,7 @@ class RegistrationGaep extends Component
     public $password;
     public $password_confirmation;
     public $program = 'gaep';
+    public $step = 1;
 
 
     public function render()
@@ -34,34 +35,66 @@ class RegistrationGaep extends Component
         return view('livewire.registration-gaep');
     }
 
-    protected $rules = [
-        'username' => 'required|unique:mdl_user,username,except,id',
-        'email' => 'required|unique:mdl_user,email,except,id',
-        'firstname' => 'required',
-        'lastname' => 'required',
-        'phone' => 'required|numeric|unique:mdl_user,phone1,except,id',
-        'highest_level_of_education' => 'required|min:6',
-        'current_status' => 'required',
-        'organisation' => 'required',
-        'how_long_worked_with_farmers' => 'required',
-        'total_number_of_farmers_worked_with' => 'required',
-        'total_number_of_farmers_working_with' => 'required',
-        'how_did_learn_about_us' => 'required',
-        'password' => 'required|min:6|confirmed',
-    ];
+    // protected $rules = [
+    //     'highest_level_of_education' => 'required|min:6',
+    //     'current_status' => 'required',
+    //     'organisation' => 'required',
+    //     'how_long_worked_with_farmers' => 'required',
+    //     'total_number_of_farmers_worked_with' => 'required',
+    //     'total_number_of_farmers_working_with' => 'required',
+    //     'how_did_learn_about_us' => 'required',
+    //     'password' => 'required|min:6|confirmed',
+    // ];
 
-    protected $messages = [
-        'how_long_worked_with_farmers.required' => 'How long have you worked with farmers field is required',
-        'total_number_of_farmers_worked_with.required' => 'Total number of farmers you have worked with field is required',
-        'how_did_learn_about_us' => 'How did you learn about us field is required',
-        'total_number_of_farmers_working_with' => 'Total number of farmers currently working with field is required',
-        'how_did_learn_about_us' => 'How did you learn about us field is required'
-    ];
+    // protected $messages = [
+    //     'how_long_worked_with_farmers.required' => 'How long have you worked with farmers field is required',
+    //     'total_number_of_farmers_worked_with.required' => 'Total number of farmers you have worked with field is required',
+    //     'how_did_learn_about_us' => 'How did you learn about us field is required',
+    //     'total_number_of_farmers_working_with' => 'Total number of farmers currently working with field is required',
+    //     'how_did_learn_about_us' => 'How did you learn about us field is required'
+    // ];
+
+    public function next(){
+
+        $this->resetErrorBag();
+        $this->validateData();
+        $this->step++;
 
 
+    }
+
+    public function prev(){
+        $this->step--;
+    }
+
+    public function validateData(){
+        if($this->step == 1){
+            $this->validate([
+                'username' => 'required|unique:mdl_user,username,except,id|lowercase',
+                'email' => 'required|unique:mdl_user,email,except,id|lowercase',
+                'firstname' => 'required',
+                'lastname' => 'required',
+                'phone' => 'required|numeric|unique:mdl_user,phone1,except,id',
+            ]);
+        }elseif($this->step == 2){
+            $this->validate([
+                'highest_level_of_education' => 'required|min:6',
+                'current_status' => 'required',
+                'organisation' => 'required',
+                'how_long_worked_with_farmers' => 'required',
+                'total_number_of_farmers_worked_with' => 'required',
+                'total_number_of_farmers_working_with' => 'required',
+                'how_did_learn_about_us' => 'required',
+            ]);
+        }elseif($this->step == 3){
+            $this->validate([
+                'password' => 'required|min:6|confirmed',
+            ]);
+        }
+    }
     public function register(){
 
-        $this->validate();
+        $this->validateData();
 
         $response = Http::get($this->BASE_URL.'/webservice/rest/server.php',[
 
@@ -149,9 +182,9 @@ class RegistrationGaep extends Component
         } else {
 
             $createdUser = $response[0]['username'];
-            $userId = $response[0]['id'];
-            $newUser = DB::table('mdl_users')->where('id', $userId)->first();
+            $newUser = DB::table('mdl_users')->where('username', $createdUser)->first();
             $newUser->confirmed = 0;
+
             $newUser->save();
 
             session()->flash('success', 'Dear '.$createdUser.', Your application for the GAEP program has been submitted successfully, you will be contacted shortly via email when your data is validated');

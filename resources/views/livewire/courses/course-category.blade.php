@@ -5,10 +5,10 @@
     <div class="grid md:grid-cols-4 mt-12 gap-8 pb-2">
         @foreach ($courses as $course )
             <div class="shadow-md hover:shadow-lg hover:shadow-gray-300 hover:transition-shadow hover:duration-300 rounded-lg bg-white">
-                <a href="{{ route('course.detail', ['course' => $course['shortname']]) }}">
+                {{-- <a href="{{ route('course.detail', ['course' => $course['shortname']]) }}"> --}}
+                <a href="{{ $BASE_URL.'/course/view.php?id='.$course['id']}}">
                     <img src="{{ $course['courseimage']}}" class="h-48 w-full object-cover object-center" alt="">
                     <h4 class="font-bold text-md py-3 px-4">{{ $course['fullname'] }}</h4>
-                    {{-- <p>{!!$course['summary']!!}</p> --}}
                 </a>
             </div>
         @endforeach

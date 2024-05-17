@@ -31,8 +31,8 @@ class RegistrationSaep extends Component
     }
 
     protected $rules = [
-        'username' => 'required|unique:mdl_user,username,except,id',
-        'email' => 'required|unique:mdl_user,email,except,id',
+        'username' => 'required|unique:mdl_user,username,except,id|lowercase',
+        'email' => 'required|unique:mdl_user,email,except,id|lowercase',
         'firstname' => 'required',
         'lastname' => 'required',
         'phone' => 'required|numeric|unique:mdl_user,phone1,except,id',
@@ -84,7 +84,7 @@ class RegistrationSaep extends Component
                         ],
 
                         [
-                            'type' => 'how_did_you_learn_about_us',
+                            'type' => 'how_did_learn_about_us',
                             'value' => $this->how_did_learn_about_us
                         ],
 
